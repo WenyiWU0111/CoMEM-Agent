@@ -1,0 +1,14 @@
+- Question: "I want to find the information about the product 'iPhone 15'"
+- Action: {{"name": "type", "arguments": {{"text": "iPhone 15", "element_id": "x", "field_description": "search input field", "reasoning": "I need to search for iPhone 15 information"}}}}
+- Action: {{"name": "click", "arguments": {{"element_id": "x", "description": "search button or first iPhone 15 result", "reasoning": "I need to click the search button or first result"}}}}
+- Action: {{"name": "scroll", "arguments": {{"direction": "down", "reasoning": "I need to scroll to find more information"}}}}
+- Action: {{"name": "stop", "arguments": {{"answer": "Found iPhone 15 information: [details]", "reasoning": "I have found the information, task complete"}}}}
+
+- Question: "Whether the Sydney Opera House is open for the public? If so, book me a hotel in Sydney."
+- Action: {{"name": "type", "arguments": {{"text": "Sydney Opera House", "element_id": "x", "field_description": "search input field", "reasoning": "I need to search for Sydney Opera House information"}}}}
+- Action: {{"name": "click", "arguments": {{"element_id": "x", "description": "first result about Sydney Opera House", "reasoning": "I need to click the first result to get details"}}}}
+- Action: {{"name": "scroll", "arguments": {{"direction": "down", "reasoning": "I need to scroll to find opening hours information"}}}}
+- Action: {{"name": "goto_url", "arguments": {{"page_name": "hotel booking", "reasoning": "If it's open, I need to go to hotel booking page"}}}}
+- Action: {{"name": "type", "arguments": {{"text": "Sydney", "element_id": "x", "field_description": "destination search field", "reasoning": "I need to search for hotels in Sydney"}}}}
+- Action: {{"name": "click", "arguments": {{"element_id": "x", "description": "first hotel result", "reasoning": "I need to click the first hotel to book it"}}}}
+- Action: {{"name": "stop", "arguments": {{"answer": "Booked hotel in Sydney: [hotel details]", "reasoning": "Task completed successfully"}}}}

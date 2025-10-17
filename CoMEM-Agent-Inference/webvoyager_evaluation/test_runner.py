@@ -253,21 +253,12 @@ class TestRunner:
                     
                     break
                 
-        # Store trajectory info
-        self.trajActions[config_file] = action_list
-        
         score, answer_text, ori_answer = self.evaluator(config_file, self.args.result_dir)
         last_action = trajectory[-1]
         pred = last_action.get("answer", "")
         reasoning = last_action.get("reasoning", "")
         self.logger.info(f"[Result] Predicted answer: {pred}\nReasoning: {reasoning}")
-        
-        self.metrics_dict[config_file] = {
-                "config": config_file,
-                "success": score,
-            }
-        self.trajSuccess[config_file] = score
-
+    
         result = "PASS" if score==1 else "FAIL"
         self.logger.info(f"[Result] ({result}) {config_file}")
         

@@ -153,7 +153,7 @@ def create_test_file_list_mmina(domain: str, start_idx: int = 0, end_idx: int = 
         end_idx = task_num
     
     test_file_list = [f"mmina/{domain}/{i+1}.json" for i in range(start_idx, min(end_idx, task_num))]
-    return test_file_list[:50]
+    return test_file_list
 
 def create_test_file_list_visualwebarena(domain: str, start_idx: int = 0, end_idx: int = None) -> list:
     """

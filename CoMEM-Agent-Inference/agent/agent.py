@@ -78,6 +78,7 @@ class FunctionCallAgent:
         print('*'*50, 'function_map', '*'*50)
         
         training_data_dir = getattr(args, 'training_data_dir', 'training_data')
+        memory_data_dir = getattr(args, 'memory_data_dir', 'training_data')
         # Initialize training data collector if enabled
         if hasattr(args, 'collect_training_data') and args.collect_training_data:
             from utils.training_data_collector import TrainingDataCollector, get_collector, set_collector
@@ -100,7 +101,7 @@ class FunctionCallAgent:
             # Check if there's a saved index path
             faiss_index_path = getattr(args, 'faiss_index_path', None)
             print(f"Initializing Memory system (multimodal: {multimodal})...")
-            self.memory = Memory(training_data_path=training_data_dir, multimodal=multimodal, faiss_index_path=faiss_index_path, agent=self, bank_size=args.bank_size)
+            self.memory = Memory(training_data_path=memory_data_dir, multimodal=multimodal, faiss_index_path=faiss_index_path, agent=self, bank_size=args.bank_size)
             print("Memory system initialized successfully")
             self.experience_memory = None
             self.experience_texts, self.experience_images, self.file_id_list = None, None, None

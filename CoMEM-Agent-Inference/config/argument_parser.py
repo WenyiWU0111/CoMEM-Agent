@@ -32,7 +32,7 @@ def config() -> argparse.Namespace:
     parser.add_argument("--viewport_height", type=int, default=720)
     parser.add_argument("--save_trace_enabled", action="store_true")
     parser.add_argument("--sleep_after_execution", type=float, default=0.0)
-    parser.add_argument("--max_steps", type=int, default=10)
+    parser.add_argument("--max_steps", type=int, default=15)
     parser.add_argument(
         "--imgbin_dir",
         type=str,
@@ -76,8 +76,8 @@ def config() -> argparse.Namespace:
     parser.add_argument("--use_memory", type=bool, default=False)
     parser.add_argument("--use_history", type=bool, default=False)
     parser.add_argument("--use_continuous_memory", type=bool, default=False)
-    parser.add_argument("--faiss_index_path", type=str, default='')
-    parser.add_argument("--similar_num", type=int, default=3)
+    parser.add_argument("--faiss_index_path", type=str, default=None)
+    parser.add_argument("--similar_num", type=int, default=10)
     parser.add_argument("--bank_size", type=int, default=None)
     parser.add_argument(
         "--max_obs_length",
@@ -104,6 +104,7 @@ def config() -> argparse.Namespace:
                         help="Enable collection of training data (prompts and responses)")
     parser.add_argument("--training_data_dir", type=str, default="training_data",
                         help="Directory to save training data files")
+    parser.add_argument("--memory_data_dir", type=str, default="training_data"),
     
     # Subtask decomposition configuration
     parser.add_argument("--subtask", action='store_true', default=False, 

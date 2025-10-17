@@ -432,7 +432,8 @@ Website Analysis: {info_summary}"""
                 {"type": "text", "text": info_prompt},
                 {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{screenshot}"}}
             ]}]
-            info_response = self.llm.chat(messages).content
+            info_response, _, _ = self.llm.chat(messages)
+            info_response = info_response.content
             
             logger.info(f"Extracted information for {url}")
             
@@ -442,7 +443,8 @@ Website Analysis: {info_summary}"""
                 {"type": "text", "text": task_prompt},
                 {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{screenshot}"}}
             ]}]
-            task_response = self.llm.chat(messages).content
+            task_response = self.llm.chat(messages)
+            task_response = task_response.content
             
             # Step 5: Parse tasks
             tasks = self.parse_task_response(task_response, url, category)

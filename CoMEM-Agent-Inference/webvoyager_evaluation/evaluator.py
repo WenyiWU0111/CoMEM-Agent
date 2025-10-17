@@ -88,8 +88,8 @@ class LLMEvaluator(Evaluator):
 You should elaborate on how you arrived at your final evaluation and then provide a definitive verdict on whether the task has been successfully accomplished, either as 'SUCCESS' or 'NOT SUCCESS'.
 You should provide the 'SUCCESS' or 'NOT SUCCESS' between <result> and </result>."""
 
-        USER_PROMPT = """TASK: <task>
-        Result Response: <answer>"""
+        USER_PROMPT = """TASK: {task}
+        Result Response: {answer}"""
 
         user_prompt = USER_PROMPT.format(task=intent, answer=answer)
         

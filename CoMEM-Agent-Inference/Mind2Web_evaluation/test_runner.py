@@ -243,11 +243,7 @@ class TestRunner:
         pred = last_action.get("answer", "")
         reasoning = last_action.get("reasoning", "")
         self.logger.info(f"[Result] Predicted answer: {pred}\nReasoning: {reasoning}")
-        self.metrics_dict[config_file] = {
-                "config": config_file,
-                "success": score,
-            }
-
+    
         result = "PASS" if score==1 else "FAIL"
         self.logger.info(f"[Result] ({result}) {config_file}")
         

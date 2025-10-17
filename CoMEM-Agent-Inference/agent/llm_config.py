@@ -266,7 +266,7 @@ def create_direct_vllm_model(args: argparse.Namespace, model_name: str = None) -
 
     model_name_ = model_name_map.get(model_name, model_name)
     server_url = model_server_map[model_name]
-    api_key = args.get('open_router_api_key', 'EMPTY')
+    api_key = args.getattr('open_router_api_key', 'EMPTY')
     print('model_name', model_name_)
     print('server_url', server_url)
     print('api_key', api_key)
@@ -323,8 +323,8 @@ def load_grounding_model_vllm(args: argparse.Namespace):
     grounding_model = create_direct_vllm_model(args, model_name='ui-tars')
     return grounding_model
 
-def load_tool_llm(args: argparse.Namespace) -> DirectVLLMModel:
+def load_tool_llm(args: argparse.Namespace, model_name='qwen2.5-vl') -> DirectVLLMModel:
     """Load tool LLM"""
-    tool_model = create_direct_vllm_model(args, model_name='qwen2.5-vl')
+    tool_model = create_direct_vllm_model(args, model_name=model_name)
     return tool_model
 
