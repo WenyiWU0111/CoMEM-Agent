@@ -4,7 +4,7 @@
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![arXiv](https://img.shields.io/badge/arXiv-2510.09038-b31b1b.svg)]([https://arxiv.org](https://arxiv.org/abs/2510.09038))
+[![arXiv](https://img.shields.io/badge/arXiv-2510.09038-b31b1b.svg)](https://arxiv.org/abs/2510.09038)
 [![arXiv](https://img.shields.io/badge/Website-CoMEMAgent-c8b6ff.svg)](https://wenyiwu0111.github.io/CoMEM-Agent-project-page/)
 [![Dataset](https://img.shields.io/badge/🤗%20Dataset-GUI--Agent--Trajectories-yellow)](https://huggingface.co/datasets/WenyiWU0111/CoMEM-agent-memory-trajectories)
 </div>
