@@ -144,9 +144,9 @@ See [`CoMEM-Agent-Inference/examples/README.md`](CoMEM-Agent-Inference/examples/
 
 We release our auto-collected trajectory dataset on HuggingFace:
 
-**[GUI-Agent-Trajectories](https://huggingface.co/datasets/WenyiWU0111/GUI-Agent-Trajectories)**
+**[GUI-Agent-Trajectories](https://huggingface.co/datasets/WenyiWU0111/CoMEM-agent-memory-trajectories)**
 
-This dataset contains **xxx+** GUI interaction trajectories collected through our auto-scaling data flywheel across diverse websites and tasks:
+This dataset contains **188,451** GUI interaction trajectories collected through our auto-scaling data flywheel across diverse websites and tasks:
 
 - **Multi-domain Coverage**: E-commerce, information seeking, booking, social media, and more
 - **Rich Annotations**: Task descriptions, Website url, Screenshots, model responses, and actions at each step
